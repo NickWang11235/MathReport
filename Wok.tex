@@ -12,11 +12,12 @@
 	\maketitle
 	
 	\section{Introduction}
-		Since the first introduction to geometry in elementary school, students have investigated the volume, surface area, and many other geometric properties of 2-Dimensional,as well as 3-Dimensional shapes. Yet one area the students' understanding falls apart is circles and spheres. As a part of the curriculum of second year Calculus students, today we look at one of these problems and approach from a Calculus point of view:\\
+		Since the first introduction to geometry in elementary school, students have investigated the volume, surface area, and many other geometric properties of 2-Dimensional,as well as 3-Dimensional shapes. Yet one area the students do not completely understand is circles and spheres. As a part of the curriculum of second year Calculus course, today we look at one of these problems and approach from a Calculus point of view:\\
 		\begin{center}
 			\textit {One such problem states that a semi-spherical wok exists with diameter of 16 cm and height 9 cm. We are to paint the outside and inside of 5000 woks with 0.5 mm thick of paint each. Calculate the volume of paint needed in liters. }\\
 		\end{center}
 		\begin{figure}[h]
+			\label{wok dimensions}
 			\centering
 			\includegraphics[width=0.5\textwidth]{wok.png}
 			\caption{Wok Dimensions}
@@ -24,11 +25,13 @@
 	
 	\section{Interpolating the Problem}
 		\label{interpolation}
-		The problem states that a wok needs to be painted on both its inside and outside. This meant the area of paint needed is the surface area of the wok's inside and outside. Upon closer inspection we realize the paint is painted at 0.5 mm thick, which meant the volume of paint needed on each side is the surface area multiplied by the height of the paint, which is 0.5 mm. This meant the  real question this question is asking is what is the surface area of part of a sphere.\\\\
-		Realizing this we can use the equation $A = \int2\pi y\sqrt{1^2+\frac{dy}{dx})^2}dx$ to calculate surface area. Thus we need to find f'(x) with given equation $$x^2+y^2=256$$Furthermore since the wok represents part of a sphere, we can naturally rotate the sphere onto the x-axis for easier calculation. Thus simplifying we get:$$y=\sqrt{256-x^2}$$
+		The problem states that a wok needs to be painted on both its inside and outside. This meant the area to paint is the surface area of the wok's inside and outside. Additionaly the paint is painted 0.5 mm thick, which meant the volume of paint needed on each side is the surface area multiplied by the height of the paint, which is 0.5 mm. This meant the  real question this question is asking is what is the surface area of part of a sphere, since height is known.\\\\
+		Realizing this we can use the formula $A = \int2\pi y\sqrt{1^2+\frac{dy}{dx})^2}dx$ to calculate surface area This indeed meant the calculation must be done in terms of $dx$, which will be addressed.\\\\
+		 Thus we need to find $f'(x)$ with given equation $$x^2+y^2=256$$\\
+		Furthermore since the wok represents part of a sphere, we can naturally rotate the sphere shown in Figure \ref{wok dimensions} onto the x-axis for easier calculation with $dx$ instead of $dy$. Thus simplifying we get:$$y=\sqrt{256-x^2}$$
 	\section{Calculations} 
 		Using equations we got from section \ref{interpolation}: $$\frac{dy}{dx}=\frac{1}{2}{(256-x^2)}^{-1/2} 2x$$
-		Plugging in the equation and the bounds:$$A = \int_7^{16} 2\pi \sqrt{256-x^2}\sqrt{1^2+{(\frac{1}{2}{(256-x^2)}^{-1/2} 2x)}^2}dx$$
+		Plugging in the equation and the bounds:$$A = \int_7^{16} 2\pi \sqrt{256-x^2}\sqrt{1^2+{(\frac{1}{2}{(256-x^2)}^{-1/2} 2x)}^2}dx$$s
 		Expanding each term:$$A =2\pi \int_7^{16} \sqrt{256-x^2}\sqrt{1+{(256-x^2)}^{-1} x^2}dx$$
 		Changing negative exponent to a fraction:$$A =2\pi \int_7^{16} \sqrt{256-x^2}\sqrt{1+\frac{x^2}{256-x^2}}dx$$
 		Rewriting 1 with common denominator:$$A =2\pi \int_7^{16} \sqrt{256-x^2}\sqrt{\frac{256-x^2+x^2}{256-x^2}}dx$$
