@@ -45,9 +45,11 @@
 		\indent Changing negative exponent to a fraction:$$A =2\pi \int_7^{16} \sqrt{256-x^2}\sqrt{1+\frac{x^2}{256-x^2}}dx$$
 		\indent Rewriting 1 with common denominator $256-x^2$:$$A =2\pi \int_7^{16} \sqrt{256-x^2}\sqrt{\frac{256-x^2}{256-x^2}+\frac{x^2}{256-x^2}}dx$$
 		\indent Combining terms with common denominator: $256-x^2$:$$A =2\pi \int_7^{16} \sqrt{256-x^2}\sqrt{\frac{256-x^2 + x^2}{256-x^2}}dx$$
-		\indent Canceling out similar terms and pulling out constant 256:$$A =2\pi \int_7^{16} \sqrt{256-x^2}16 \sqrt{\frac{1}{256-x^2}}dx$$
-		\indent Moving the constants out of the integral and simplifying the integrand:$$A =32\pi \int_7^{16}{(256-x^2)}^{1/2} {(256-x^2)}^{-1/2}dx$$
-		\indent Combining similar terms by adding up the coefficient:$$A =32\pi \int_7^{16}{(256-x^2)}^{1/2-1/2} dx$$
+		\indent Canceling out similar terms under the radicant:$$A =2\pi \int_7^{16} \sqrt{256-x^2} \sqrt{\frac{256}{256-x^2}}dx$$
+		\indent Pulling out the constant 256:$$A =2\pi \int_7^{16} \sqrt{256-x^2} 16\sqrt{\frac{1}{256-x^2}}dx$$
+		\indent Moving the constants out of the integral:$$A =32\pi \int_7^{16}\sqrt{256-x^2} \sqrt{\frac{1}{256-x^2}}dx$$
+		\indent Rewriting radicant as exponents:$$A =32\pi \int_7^{16}{(256-x^2)} ^{1/2}{(256-x^2)}^{-1/2}dx$$
+		\indent Combining similar terms by adding up the coefficient:$$A =32\pi \int_7^{16}{(256-x^2)}^0 dx$$
 		\indent Simplifying the integrand, a function to the 0 power is 1:$$A =32\pi \int_7^{16}1 dx$$
 		\indent Taking the integral:$$A =32\pi \left[x\right]_7^{16}$$
 		\indent Plugging in the bounds:$$A =32\pi {(16-7)}=288\pi$$
@@ -56,6 +58,6 @@
 
 	\section{Conclusion}
 	\paragraph
-		\indent This problem investigates the properties of surface areas of spheres by connecting them to real life situations. The problem is complicated by hiding under what seems to be a volume problem. At first glance it seems that this is a washer or a intersection. Placing the sphere below the x axis and perpendicular to the y axis it first sets up the problem in a uncomfortable position, but with some analysis it can be determined that rotating the sphere on top of the x axis will greatly simplify the calculation without changing the result. During the calculation we investigated the properties of a sphere without using any specific equation and derived at the result that 5000 woks would require $72\pi$ liters of paint. The similar  process can be used on a general case to derive the formula of the surface area of spheres  for further investigation.
+		\indent This problem investigates the properties of surface areas of spheres by connecting them to real life situations. During the calculation we investigated the properties of a sphere without using any equation specific to spheres and derived at the result that 5000 woks would require $72\pi$ liters of paint. The same process if used more generally can be used to derive the formula of the surface area of spheres: $4\pi r^2$.
 
 \end{document}
