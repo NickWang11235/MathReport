@@ -1,5 +1,7 @@
 \documentclass[a4paper, 12pt]{article}
 
+\usepackage{graphicx}
+
 \begin{document}
 
 	\title{Optimization of time}
@@ -21,6 +23,11 @@
 		\section{The Problem}
 		\paragraph
 		\indent  The problem told in plain English is as stated: An object, in this case a player, is thrown off an airplane flying in a fixed, predetermined, straight path over a field. The object then proceed to glide in any direction desired while falling downwards towards the ground. Below a certain height is reached, the object then opens up a parachute to slow its descent. The aim is to find the shortest possible time it would take for this object to reach any point on the field.
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.5\textwidth]{map.jpg}
+			\caption{A map that is representative of such game is shown above, the path the vehicle travels is marked by the dotted lines}
+		\end{figure}
 
 		\section{Mathematical reproduction of the problem}
 		\paragraph
@@ -60,7 +67,15 @@
 	\part{Speculations, methods, and solutions}
 		\section{Speculations}
 		\paragraph
-		\indent With the problem and variables defined, we will now look at the problem as a whole and provide some speculations. We will now only look at scenario 1 unless otherwise specified. As explained in Part I Mathematical Reproduction of the Problem, the overall time is the duration of stage 1 and 2 combined, and the aim is to minimize this sum. The duration of stage 2 is completely dependet on stage 1. If the object remained on the vehicle travelling on a fixed path, it will retain a greater horizontal velocity until leaves the vehicle. This means the longer the object remains on the vehicle, the faster it will reach the horizontal location of destination. If the object initiates the freefall, its horizontal will be much lower, but it soon gains vertical velocity. This means the sooner the object initiates freefall, the sooner it will reach the desired vertical location, the land. According to these observations, a few general 
+		\indent With the problem and variables defined, we will now look at the problem as a whole and provide some speculations. We will now only look at scenario 1 unless otherwise specified. As explained in Part I Mathematical Reproduction of the Problem, the overall time is the duration of stage 1 and 2 combined, and the aim is to minimize this sum. The duration of stage 2 is completely dependet on stage 1. If the object remained on the vehicle travelling on a fixed path, it will retain a greater horizontal velocity until leaves the vehicle. This means the longer the object remains on the vehicle, the faster it will reach the horizontal location of destination. If the object initiates the freefall, its horizontal will be much lower, but it soon gains vertical velocity. This means the sooner the object initiates freefall, the sooner it will reach the desired vertical location, the land. According to these observations, a few general conclusions can be made:
+		\begin{enumerate}
+			\item[1] The furthest distance the object can reach is a radius around the point where the object leaves the vehicle, and this radius is limited. Thus if the object leaves the vehicle way too early, or from a mathematical prospective, as the beginning time of stage 2 shifts further towards negative infinity, the object will never reach the desired location. Thus we can conclude that one mustn't drop too early.
+			\item[2] If the vehicle goes beyond the point on the path that is shortest distance from the destination, the drop path is symmetrical to the path before reaching this point. This means 
+			\item[-] Terminal velocity: The falling object will reach an arbitrarily defined terminal velocity shortly after leaving the vehicle by accelerating at $g=9.8m/s^2$, and keep falling at this velocity in stage 1 until stage 2 is reached.
+			\item[-] Deceleration: The instance stage 2 is reached, the object will release a parachut, and will slow down the object instantly to its stage 2 terminal velocity.
+			\item[-] Velocity: Velocity will be considered as a sum of components in x,y and z direction as a vector. The magnitude of velocity will remain constant as the terminal velocity.
+			\item[-] Vehicle velocity: Vehicle velocity is irrelevant in this scenario, since the object assumes the velocity of the vehicle.
+		\end{enumerate}
 		this part will go into deeper details to explain why some of the assumptions are made, and what their implications and effect will have on the final results
 		\section{Methods}
 		this part will justify how the problem is simplified into different componets and each component will be a single variable optimization problem, and the movement is considered as a vector of x,y,z components. This part will also examine how everything come together and the accuracy of such method
