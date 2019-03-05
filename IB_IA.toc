@@ -1,0 +1,43 @@
+\contentsline {part}{I\hspace {1em}Interpretation of the problem}{1}
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {paragraph}{\indent }{1}
+\contentsline {paragraph}{\indent }{1}
+\contentsline {paragraph}{\indent }{1}
+\contentsline {subparagraph}{\indent }{1}
+\contentsline {section}{\numberline {2}Mathematical reproduction of the problem}{1}
+\contentsline {paragraph}{\indent }{1}
+\contentsline {subparagraph}{\indent }{1}
+\contentsline {paragraph}{\indent }{1}
+\contentsline {paragraph}{\indent }{2}
+\contentsline {subparagraph}{\indent }{2}
+\contentsline {paragraph}{\indent }{2}
+\contentsline {subparagraph}{\indent }{2}
+\contentsline {paragraph}{\indent }{2}
+\contentsline {paragraph}{\indent }{2}
+\contentsline {paragraph}{\indent }{2}
+\contentsline {paragraph}{\indent }{3}
+\contentsline {section}{\numberline {3}Assumptions and definitions}{3}
+\contentsline {paragraph}{\indent }{3}
+\contentsline {paragraph}{\indent }{3}
+\contentsline {paragraph}{\indent }{3}
+\contentsline {paragraph}{\indent }{4}
+\contentsline {paragraph}{\indent }{4}
+\contentsline {paragraph}{\indent }{4}
+\contentsline {part}{II\hspace {1em}Additional Observations and Speculations}{4}
+\contentsline {section}{\numberline {4}Speculations}{4}
+\contentsline {paragraph}{\indent }{4}
+\contentsline {paragraph}{T}{4}
+\contentsline {paragraph}{\indent }{5}
+\contentsline {paragraph}{\indent }{5}
+\contentsline {part}{III\hspace {1em}Calculations}{5}
+\contentsline {paragraph}{\indent }{6}
+\contentsline {subparagraph}{\indent }{6}
+\contentsline {paragraph}{\indent }{8}
+\contentsline {paragraph}{\indent }{8}
+\contentsline {paragraph}{\indent }{8}
+\contentsline {paragraph}{\indent }{8}
+\contentsline {part}{IV\hspace {1em}Conclusion}{10}
+\contentsline {section}{\numberline {5}Conclusion}{11}
+\contentsline {paragraph}{\indent }{11}
+\contentsline {paragraph}{\indent }{11}
+\contentsline {paragraph}{\indent }{11}
